@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ExamMVC.Models.Order>
+
+@{
+    ViewData["Title"] = "ShowOrders";
+}
+
+<h1>ShowOrders</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CreationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShippingDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreationDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShippingDate)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
